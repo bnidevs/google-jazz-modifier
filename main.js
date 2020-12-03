@@ -1,4 +1,4 @@
-var blurlistener = getEventListeners(window)["blur"][index];
+var blurlistener = getEventListeners(window)["blur"][0];
 window.removeEventListener("blur",blurlistener.listener,blurlistener.useCapture);
 
 function rept() {
