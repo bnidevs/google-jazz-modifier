@@ -29,3 +29,5 @@ function do_riff(t){
     setTimeout(function(){do_riff(t-1)}, rand * 100);
   }
 }
+
+rept()
