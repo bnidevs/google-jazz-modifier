@@ -1,5 +1,5 @@
 var blurlisteners = getEventListeners(window)["blur"];
-while(0 in blurlisteners){
+while(typeof blurlisteners !== 'undefined'){
   var blurlistener = blurlisteners[0];
   window.removeEventListener("blur",blurlistener.listener,blurlistener.useCapture);
   blurlisteners = getEventListeners(window)["blur"];
