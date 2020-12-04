@@ -2,6 +2,7 @@ var blurlisteners = getEventListeners(window)["blur"];
 while(blurlisteners.length > 0){
   var blurlistener = blurlisteners[0];
   window.removeEventListener("blur",blurlistener.listener,blurlistener.useCapture);
+  blurlisteners = getEventListeners(window)["blur"];
 }
 
 function rept() {
