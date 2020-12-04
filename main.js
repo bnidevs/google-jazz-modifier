@@ -1,5 +1,8 @@
-var blurlistener = getEventListeners(window)["blur"][0];
-window.removeEventListener("blur",blurlistener.listener,blurlistener.useCapture);
+var blurlisteners = getEventListeners(window)["blur"];
+while(blurlisteners.length > 0){
+  var blurlistener = blurlisteners[0];
+  window.removeEventListener("blur",blurlistener.listener,blurlistener.useCapture);
+}
 
 function rept() {
   var riff = Math.random();
