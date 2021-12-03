@@ -23,13 +23,11 @@ function rept() {
 
 function do_riff(t){
   window.dispatchEvent(new KeyboardEvent('keydown',{'key':'a'}));
-  if(t > 0){
     var min = 2,max = 5;
     var rand = Math.floor(Math.random() * (max - min + 1) + min);
+  if(t > 0){
     setTimeout(function(){do_riff(t-1)}, rand * 100);
   }else{
-    var min = 2,max = 5;
-    var rand = Math.floor(Math.random() * (max - min + 1) + min);
     setTimeout(rept, rand * 100);
   }
 }
